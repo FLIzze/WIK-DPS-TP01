@@ -5,6 +5,12 @@ docker build -t api .
 docker run -it -p 80:8080 --name api_container api
 ```
 
+pour verifier l'api
+
+```
+curl localhost:80/ping
+```
+
 scout pour verifier les possibles vulns
 
 ```abel@abel ~/Documents/devops/api $ d scout cves api
