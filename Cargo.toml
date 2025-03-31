@@ -1,10 +1,10 @@
 [package]
-name = "devops"
+name = "api"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
 
 [[bin]]
-name = "devops"
+name = "api"
 path = "main.rs"
