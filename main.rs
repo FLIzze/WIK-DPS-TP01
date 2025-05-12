@@ -5,9 +5,6 @@ use std::net::{TcpListener, TcpStream};
 const HOST: &str = "0.0.0.0";
 const PORT: &str = "8080";
 
-// petit test
-// encore un test
-
 fn main() {
     let address = format!("{}:{}", HOST, PORT);
     let listener = TcpListener::bind(&address).expect("Failed to start server");
@@ -22,6 +19,7 @@ fn main() {
 }
 
 fn handle_client(stream: &mut TcpStream) {
+    println!("lets go");
     let mut buffer = [0; 1024];
     if let Ok(_) = stream.read(&mut buffer) {
         let request = String::from_utf8_lossy(&buffer);

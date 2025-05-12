@@ -36,3 +36,27 @@ scout pour verifier les possibles vulns
 
   No vulnerable packages detected
 ```
+
+### docker-compose
+
+```
+docker compose build
+docker compose up
+```
+
+maintenant sur un curl
+
+```
+api-4    | lets go
+nginx-1  | 172.20.0.1 - - [12/May/2025:11:18:26 +0000] "GET / HTTP/1.1" 404 0 "-" "curl/8.13.0"
+api-2    | lets go
+nginx-1  | 172.20.0.1 - - [12/May/2025:11:18:27 +0000] "GET / HTTP/1.1" 404 0 "-" "curl/8.13.0"
+api-3    | lets go
+nginx-1  | 172.20.0.1 - - [12/May/2025:11:18:30 +0000] "GET / HTTP/1.1" 404 0 "-" "curl/8.13.0"
+api-1    | lets go
+nginx-1  | 172.20.0.1 - - [12/May/2025:11:18:30 +0000] "GET / HTTP/1.1" 404 0 "-" "curl/8.13.0"
+api-4    | lets go
+nginx-1  | 172.20.0.1 - - [12/May/2025:11:18:35 +0000] "GET / HTTP/1.1" 404 0 "-" "curl/8.13.0"
+```
+
+load balancing sur les differents containers
